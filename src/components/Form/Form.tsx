@@ -47,7 +47,10 @@ export function Form() {
   });
 
   return (
-    <form onSubmit={form.onSubmit((values) => console.log(values))}>
+    <form
+      onSubmit={form.onSubmit((values) => console.log(values))}
+      style={{ height: "100%" }}
+    >
       <Select
         mt="md"
         comboboxProps={{ withinPortal: true }}
