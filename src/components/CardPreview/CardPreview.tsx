@@ -19,6 +19,8 @@ export function CardPreview() {
   }); // Store the image dimensions
 
   const [image] = useImage(pokeCardTemplate);
+  const url = "https://konvajs.github.io/assets/yoda.jpg";
+  const [yodaImage] = useImage(url);
 
   console.log(image?.width);
   console.log(image?.height);
@@ -84,6 +86,7 @@ export function CardPreview() {
             y={70}
             fill="green"
           />
+          <Image image={yodaImage} width={50} height={50} x={150} y={150} />
         </Layer>
       </Stage>
     </Container>
