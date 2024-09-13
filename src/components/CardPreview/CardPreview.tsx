@@ -1,8 +1,9 @@
+import cactus from "@/assets/images/my.png";
+import pokeCardTemplate from "@/assets/images/poke-card-template.png";
+import { Container } from "@mantine/core";
 import React from "react";
 import { Image, Layer, Stage, Text } from "react-konva";
-import pokeCardTemplate from "@/assets/images/poke-card-template.png";
 import useImage from "use-image";
-import { Container } from "@mantine/core";
 
 export function CardPreview() {
   const imageRef = React.useRef<HTMLImageElement | null>(null);
@@ -20,7 +21,7 @@ export function CardPreview() {
 
   const [image] = useImage(pokeCardTemplate);
   const url = "https://konvajs.github.io/assets/yoda.jpg";
-  const [yodaImage] = useImage(url);
+  const [yodaImage] = useImage(cactus);
 
   console.log(image?.width);
   console.log(image?.height);
@@ -86,7 +87,7 @@ export function CardPreview() {
             y={70}
             fill="green"
           />
-          <Image image={yodaImage} width={50} height={50} x={150} y={150} />
+          <Image image={yodaImage} width={200} height={200} x={150} y={150} />
         </Layer>
       </Stage>
     </Container>
